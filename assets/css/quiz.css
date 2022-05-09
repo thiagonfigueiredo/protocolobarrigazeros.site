@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400|Nunito:200,300,400,600,700,900i&display=swap");
+
+@font-face {
+  font-family: NunitoSans;
+  src: url(../fonts/NunitoSans-Black.ttf);
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url(../fonts/NunitoSans-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: SolmetBrush;
+  src: url(../fonts/Solmet_Brush.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url(../fonts/NunitoSans-Light.ttf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url(../fonts/NunitoSans-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: NunitoSans;
+  src: url(../fonts/NunitoSans-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Futura;
+  src: url(../fonts/futur.ttf);
+  font-weight: bold;
+}
+
+html,
+body {
+  font-family: NunitoSans, open-sans, sans-serif;
+  height: 100%;
+  /* background-color: #212d3b; */
+  background: url("../images/bg.jpeg") no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.quiz-container {
+  overflow: hidden;
+  width: 100vw;
+  text-align: center;
+}
+
+.quiz-header {
+  color: #637b95;
+  text-align: center;
+  font-size: 18px;
+}
+
+.quiz-title {
+  text-align: center;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gender-container {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 720px;
+}
+
+.gender-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 260px;
+  width: 260px;
+}
+
+.male.gender-select {
+  background: url("../images/male.png") no-repeat;
+  height: 260px;
+  width: 260px;
+  content: " ";
+  background-color: transparent !important;
+  background-size: 100%;
+  opacity: 0.7;
+  transition: box-shadow 1s, color 1s, opacity 1s;
+}
+
+.female.gender-select {
+  background: url("../images/female.png") no-repeat;
+  height: 260px;
+  width: 260px;
+  content: " ";
+  background-color: transparent !important;
+  background-size: 100%;
+  opacity: 0.7;
+  transition: box-shadow 1s, color 1s, opacity 1s;
+}
+
+.gender-select:hover {
+  opacity: 1;
+}
+
+.gender-select span {
+  padding-top: 60px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.or {
+  vertical-align: middle;
+}
+
+.goBack {
+  display: inline-block;
+  width: 68px;
+  height: 68px;
+  background: #2b3444;
+  line-height: 68px;
+  font-size: 30px;
+  border-radius: 34px;
+  margin: 0 10px;
+  vertical-align: top;
+  font-weight: 800;
+  color: #3e4c5e;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.progress {
+  background: #2b3444;
+  height: 68px;
+  border-radius: 34px;
+  margin: 4px;
+  width: 600px;
+}
+
+.line {
+  height: 4px;
+  background-color: #3e4c5e;
+  width: 90%;
+  vertical-align: center;
+  margin: auto;
+  border-radius: 2px;
+  display: flex;
+}
+
+.line-active {
+  height: 4px;
+  background-color: #00dc53;
+  width: 0%;
+  vertical-align: center;
+  margin: auto;
+  border-radius: 2px;
+  position: absolute;
+}
+
+.step {
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background-color: #3e4c5e;
+  position: relative;
+  bottom: 5px;
+}
+
+.two.step {
+  margin-left: 240px;
+}
+
+.three.step {
+  margin-left: auto;
+}
+
+.active.step {
+  background-color: #00dc53;
+  background-size: 100%;
+}
+
+.two.line-active {
+  width: 256px;
+}
+
+.three.line-active {
+  width: 532px;
+}
+
+.daily-activity-container {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1000px;
+  flex-wrap: wrap;
+}
+
+.activity-item-border {
+  border-radius: 30px;
+  background: url(../images/gradient-border.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 10px;
+}
+
+.activity-item {
+  width: 300px;
+  height: 70px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.activity-item:hover {
+  background: linear-gradient(90deg, #0284fe 0%, #0df5d2 100%);
+}
+
+@media screen and (max-width: 480px) {
+  .quiz-header {
+    color: #637b95;
+    text-align: center;
+    max-width: 75%;
+    display: inline-block;
+  }
+
+  .gender-container {
+    width: 195px;
+    flex-direction: column;
+  }
+
+  .male.gender-select {
+    width: 200px;
+    height: 200px;
+  }
+
+  .female.gender-select {
+    width: 200px;
+    height: 200px;
+  }
+
+  .goBack {
+    display: inherit;
+    margin-right: 0px;
+  }
+
+  .progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+  }
+
+  .progress {
+    height: 41px;
+    border-radius: 20.5px;
+    width: auto;
+  }
+
+  .two.step {
+    margin-left: 40vw;
+  }
+
+  .three.step {
+    margin-left: auto;
+  }
+
+  .two.line-active {
+    width: 45%;
+  }
+
+  .three.line-active {
+    width: 85%;
+  }
+
+  .daily-activity-container {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .activity-item-border {
+    background: url(../images/gradient-border.png) no-repeat;
+  }
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .daily-activity-container {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .two.step {
+    margin-left: 32vw;
+  }
+
+  .three.step {
+    margin-left: auto;
+  }
+
+  .two.line-active {
+    width: 35%;
+  }
+
+  .three.line-active {
+    width: 70%;
+  }
+}
+
+@media all and (device-width: 820px) and (device-height: 1180px) and (orientation: portrait) {
+  .daily-activity-container {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .two.step {
+    margin-left: 30vw;
+  }
+
+  .three.step {
+    margin-left: auto;
+  }
+  .two.line-active {
+    width: 33%;
+  }
+
+  .three.line-active {
+    width: 65%;
+  }
+}
+
+@media all and (device-width: 912px) and (device-height: 1368px) and (orientation: portrait) {
+  .daily-activity-container {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .two.step {
+    margin-left: 27vw;
+  }
+
+  .three.step {
+    margin-left: auto;
+  }
+
+  .two.line-active {
+    width: 29%;
+  }
+
+  .three.line-active {
+    width: 58%;
+  }
+}
+
+@media all and (device-width: 540px) and (device-height: 720px) and (orientation: portrait) {
+  .daily-activity-container {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .male.gender-select {
+    width: 200px;
+    height: 200px;
+  }
+
+  .female.gender-select {
+    width: 200px;
+    height: 200px;
+  }
+
+  .two.step {
+    margin-left: 32vw;
+  }
+
+  .three.step {
+    margin-left: auto;
+  }
+
+  .two.line-active {
+    width: 36%;
+  }
+
+  .three.line-active {
+    width: 71%;
+  }
+}
+
+@media all and (device-width: 280px) and (device-height: 653px) and (orientation: portrait) {
+  .male.gender-select {
+    width: 200px;
+    height: 200px;
+  }
+
+  .female.gender-select {
+    width: 200px;
+    height: 200px;
+  }
+
+  .two.step {
+    margin-left: 35vw;
+  }
+
+  .three.step {
+    margin-left: auto;
+  }
+
+  .two.line-active {
+    width: 45%;
+  }
+
+  .three.line-active {
+    width: 82%;
+  }
+}
+
+@media all and (device-width: 1024px) and (device-height: 600px) and (orientation: landscape) {
+  .two.step {
+    margin-left: 24vw;
+  }
+
+  .three.step {
+    margin-left: auto;
+  }
+
+  .two.line-active {
+    width: 26%;
+  }
+
+  .three.line-active {
+    width: 52%;
+  }
+}
+
+@media all and (device-width: 1180px) and (device-height: 820px) and (orientation: landscape) {
+  .two.step {
+    margin-left: 21vw;
+  }
+
+  .three.step {
+    margin-left: auto;
+  }
+
+  .two.line-active {
+    width: 23%;
+  }
+
+  .three.line-active {
+    width: 45%;
+  }
+}
+
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+  .two.step {
+    margin-left: 23.5vw;
+  }
+
+  .three.step {
+    margin-left: auto;
+  }
+  .two.line-active {
+    width: 26%;
+  }
+
+  .three.line-active {
+    width: 52%;
+  }
+}
+
+@media all and (device-width: 720px) and (device-height: 540px) and (orientation: landscape) {
+  .two.step {
+    margin-left: 32vw;
+  }
+
+  .three.step {
+    margin-left: auto;
+  }
+
+  .two.line-active {
+    width: 35%;
+  }
+
+  .three.line-active {
+    width: 74%;
+  }
+}
