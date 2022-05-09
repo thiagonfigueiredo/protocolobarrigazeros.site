@@ -55,6 +55,7 @@ body {
   overflow: hidden;
   width: 100vw;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .quiz-header {
